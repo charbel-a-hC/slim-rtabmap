@@ -9,38 +9,38 @@ SET(SRC_FILES
     
     DBDriver.cpp
     DBDriverSqlite3.cpp
-    DBReader.cpp
+    # DBReader.cpp
     
-    Recovery.cpp
+    # Recovery.cpp
     
     SensorCapture.cpp
-    SensorCaptureThread.cpp
+    # SensorCaptureThread.cpp
     
     Camera.cpp
     CameraModel.cpp
     
-    camera/CameraFreenect.cpp
-    camera/CameraFreenect2.cpp
-    camera/CameraImages.cpp
-    camera/CameraK4W2.cpp
-    camera/CameraK4A.cpp
-    camera/CameraOpenni.cpp
-    camera/CameraOpenNI2.cpp
-    camera/CameraOpenNICV.cpp
-    camera/CameraRealSense.cpp
-    camera/CameraRealSense2.cpp
-    camera/CameraRGBDImages.cpp
-    camera/CameraStereoDC1394.cpp
-    camera/CameraStereoFlyCapture2.cpp
-    camera/CameraStereoImages.cpp
-    camera/CameraStereoVideo.cpp
-    camera/CameraStereoZed.cpp
-    camera/CameraStereoZedOC.cpp
-    camera/CameraStereoTara.cpp
-    camera/CameraVideo.cpp
-    camera/CameraMyntEye.cpp
-    camera/CameraDepthAI.cpp
-	camera/CameraSeerSense.cpp
+    # camera/CameraFreenect.cpp
+    # camera/CameraFreenect2.cpp
+    # camera/CameraImages.cpp
+    # camera/CameraK4W2.cpp
+    # camera/CameraK4A.cpp
+    # camera/CameraOpenni.cpp
+    # camera/CameraOpenNI2.cpp
+    # camera/CameraOpenNICV.cpp
+    # camera/CameraRealSense.cpp
+    # camera/CameraRealSense2.cpp
+    # camera/CameraRGBDImages.cpp
+    # camera/CameraStereoDC1394.cpp
+    # camera/CameraStereoFlyCapture2.cpp
+    # camera/CameraStereoImages.cpp
+    # camera/CameraStereoVideo.cpp
+    # camera/CameraStereoZed.cpp
+    # camera/CameraStereoZedOC.cpp
+    # camera/CameraStereoTara.cpp
+    # camera/CameraVideo.cpp
+    # camera/CameraMyntEye.cpp
+    # camera/CameraDepthAI.cpp
+	# camera/CameraSeerSense.cpp
     
     EpipolarGeometry.cpp
     VisualWord.cpp
@@ -114,35 +114,35 @@ SET(SRC_FILES
     LocalGridMaker.cpp
     LocalGrid.cpp
     global_map/OccupancyGrid.cpp
-    global_map/CloudMap.cpp
+    # global_map/CloudMap.cpp
     
     MarkerDetector.cpp
     
     GlobalDescriptorExtractor.cpp
     
-    GainCompensator.cpp
+    # GainCompensator.cpp
 
     rtflann/ext/lz4.c
     rtflann/ext/lz4hc.c
     FlannIndex.cpp
     
     #clams stuff
-    clams/discrete_depth_distortion_model_helpers.cpp
-    clams/discrete_depth_distortion_model.cpp
-    clams/frame_projector.cpp
-    clams/slam_calibrator.cpp
+    # clams/discrete_depth_distortion_model_helpers.cpp
+    # clams/discrete_depth_distortion_model.cpp
+    # clams/frame_projector.cpp
+    # clams/slam_calibrator.cpp
     
     opencv/ORBextractor.cc
     opencv/solvepnp.cpp
     opencv/five-point.cpp
 )
 
-IF(PCL_VERSION VERSION_GREATER_EQUAL "1.8")
-SET(SRC_FILES
-    ${SRC_FILES}
-    lidar/LidarVLP16.cpp
-)
-ENDIF(PCL_VERSION VERSION_GREATER_EQUAL "1.8")
+# IF(PCL_VERSION VERSION_GREATER_EQUAL "1.8")
+# SET(SRC_FILES
+#     ${SRC_FILES}
+#     lidar/LidarVLP16.cpp
+# )
+# ENDIF(PCL_VERSION VERSION_GREATER_EQUAL "1.8")
 
 IF(OpenCV_VERSION_MAJOR EQUAL 2)
 SET(SRC_FILES

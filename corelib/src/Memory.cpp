@@ -63,6 +63,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <pcl/common/common.h>
 #include <rtabmap/core/MarkerDetector.h>
 #include <opencv2/imgproc/types_c.h>
+#include <iostream>
+#include <fstream>
 #include <rtabmap/core/LocalGridMaker.h>
 
 namespace rtabmap {
@@ -171,50 +173,51 @@ bool Memory::init(const std::string & dbUrl, bool dbOverwritten, const Parameter
 
 	if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit("Clearing memory..."));
 	DBDriver * tmpDriver = 0;
-	if((!_memoryChanged && !_linksChanged) || dbOverwritten)
+	
+	if((!_memoryChanged && !_linksChanged) || dbOverwritten)//yes
 	{
-		if(_dbDriver)
+		if(_dbDriver)//no
 		{
 			tmpDriver = _dbDriver;
 			_dbDriver = 0; // HACK for the clear() below to think that there is no db
 		}
 	}
-	else if(!_memoryChanged && _linksChanged)
+	else if(!_memoryChanged && _linksChanged)//no
 	{
 		_dbDriver->setTimestampUpdateEnabled(false); // update links only
 	}
 	this->clear();
 	if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit("Clearing memory, done!"));
 
-	if(tmpDriver)
+	if(tmpDriver)//no
 	{
 		_dbDriver = tmpDriver;
 	}
 
-	if(_dbDriver)
+	if(_dbDriver)//no
 	{
 		if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit("Closing database connection..."));
 		_dbDriver->closeConnection();
 		if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit("Closing database connection, done!"));
 	}
 
-	if(_dbDriver == 0)
+	if(_dbDriver == 0)//yes
 	{
 		_dbDriver = DBDriver::create(parameters);
 	}
 
 	bool success = true;
-	if(_dbDriver)
+	if(_dbDriver)//yes
 	{
 		_dbDriver->setTimestampUpdateEnabled(true); // make sure that timestamp update is enabled (may be disabled above)
 		success = false;
 		if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit(std::string("Connecting to database \"") + dbUrl + "\"..."));
-		if(_dbDriver->openConnection(dbUrl, dbOverwritten))
+		if(_dbDriver->openConnection(dbUrl, dbOverwritten))//yes
 		{
 			success = true;
 			if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit(std::string("Connecting to database \"") + dbUrl + "\", done!"));
 		}
-		else
+		else//no
 		{
 			if(postInitClosingEvents) UEventsManager::post(new RtabmapEventInit(RtabmapEventInit::kError, std::string("Connecting to database ") + dbUrl + ", path is invalid!"));
 		}

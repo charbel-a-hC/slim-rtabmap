@@ -2,41 +2,41 @@
 
 ### Qt Gui stuff ###
 SET(headers_ui 
-	../include/${PROJECT_PREFIX}/gui/MainWindow.h
-	../include/${PROJECT_PREFIX}/gui/PreferencesDialog.h
-	../include/${PROJECT_PREFIX}/gui/DatabaseViewer.h
-	../include/${PROJECT_PREFIX}/gui/AboutDialog.h
-	../include/${PROJECT_PREFIX}/gui/ConsoleWidget.h
-	../include/${PROJECT_PREFIX}/gui/ImageView.h
-	../include/${PROJECT_PREFIX}/gui/PdfPlot.h
-	../include/${PROJECT_PREFIX}/gui/StatsToolBox.h
-	../include/${PROJECT_PREFIX}/gui/ProgressDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/MainWindow.h
+	# ../include/${PROJECT_PREFIX}/gui/PreferencesDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/DatabaseViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/AboutDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/ConsoleWidget.h
+	# ../include/${PROJECT_PREFIX}/gui/ImageView.h
+	# ../include/${PROJECT_PREFIX}/gui/PdfPlot.h
+	# ../include/${PROJECT_PREFIX}/gui/StatsToolBox.h
+	# ../include/${PROJECT_PREFIX}/gui/ProgressDialog.h
 	../include/${PROJECT_PREFIX}/utilite/UPlot.h
-	../include/${PROJECT_PREFIX}/utilite/UImageView.h
-	../include/${PROJECT_PREFIX}/gui/CloudViewer.h
-	../include/${PROJECT_PREFIX}/gui/OdometryViewer.h
-	../include/${PROJECT_PREFIX}/gui/LoopClosureViewer.h
-	../include/${PROJECT_PREFIX}/gui/DataRecorder.h
-	../include/${PROJECT_PREFIX}/gui/CameraViewer.h
-	../include/${PROJECT_PREFIX}/gui/CalibrationDialog.h
-	../include/${PROJECT_PREFIX}/gui/ExportDialog.h
-	../include/${PROJECT_PREFIX}/gui/PostProcessingDialog.h
-	../include/${PROJECT_PREFIX}/gui/ExportCloudsDialog.h
-	../include/${PROJECT_PREFIX}/gui/ExportBundlerDialog.h
-	../include/${PROJECT_PREFIX}/gui/MapVisibilityWidget.h
-	../include/${PROJECT_PREFIX}/gui/GraphViewer.h
-	../include/${PROJECT_PREFIX}/gui/CreateSimpleCalibrationDialog.h
-	../include/${PROJECT_PREFIX}/gui/ParametersToolBox.h
-	../include/${PROJECT_PREFIX}/gui/DepthCalibrationDialog.h
-	../include/${PROJECT_PREFIX}/gui/EditConstraintDialog.h
-	./3rdParty/QMultiComboBox.h
-	../include/${PROJECT_PREFIX}/gui/TexturingState.h
-	../include/${PROJECT_PREFIX}/gui/RecoveryState.h
-	../include/${PROJECT_PREFIX}/gui/EditDepthArea.h
-	../include/${PROJECT_PREFIX}/gui/EditMapArea.h
-	../include/${PROJECT_PREFIX}/gui/MultiSessionLocWidget.h
-	../include/${PROJECT_PREFIX}/gui/MultiSessionLocSubView.h
-	../include/${PROJECT_PREFIX}/gui/LinkRefiningDialog.h
+	# ../include/${PROJECT_PREFIX}/utilite/UImageView.h
+	# ../include/${PROJECT_PREFIX}/gui/CloudViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/OdometryViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/LoopClosureViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/DataRecorder.h
+	# ../include/${PROJECT_PREFIX}/gui/CameraViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/CalibrationDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/ExportDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/PostProcessingDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/ExportCloudsDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/ExportBundlerDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/MapVisibilityWidget.h
+	# ../include/${PROJECT_PREFIX}/gui/GraphViewer.h
+	# ../include/${PROJECT_PREFIX}/gui/CreateSimpleCalibrationDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/ParametersToolBox.h
+	# ../include/${PROJECT_PREFIX}/gui/DepthCalibrationDialog.h
+	# ../include/${PROJECT_PREFIX}/gui/EditConstraintDialog.h
+	# ./3rdParty/QMultiComboBox.h
+	# ../include/${PROJECT_PREFIX}/gui/TexturingState.h
+	# ../include/${PROJECT_PREFIX}/gui/RecoveryState.h
+	# ../include/${PROJECT_PREFIX}/gui/EditDepthArea.h
+	# ../include/${PROJECT_PREFIX}/gui/EditMapArea.h
+	# ../include/${PROJECT_PREFIX}/gui/MultiSessionLocWidget.h
+	# ../include/${PROJECT_PREFIX}/gui/MultiSessionLocSubView.h
+	# ../include/${PROJECT_PREFIX}/gui/LinkRefiningDialog.h
 )
 
 SET(qrc 
@@ -49,43 +49,43 @@ ENDIF()
 
 
 SET(SRC_FILES 
-	./MainWindow.cpp
-	./PreferencesDialog.cpp
-	./KeypointItem.cpp
-	./ImageView.cpp
-	./PdfPlot.cpp
-	./StatsToolBox.cpp
-	./ProgressDialog.cpp
-	./AboutDialog.cpp
-	./ConsoleWidget.cpp
-	./DatabaseViewer.cpp
+	# ./MainWindow.cpp
+	# ./PreferencesDialog.cpp
+	# ./KeypointItem.cpp
+	# ./ImageView.cpp
+	# ./PdfPlot.cpp
+	# ./StatsToolBox.cpp
+	# ./ProgressDialog.cpp
+	# ./AboutDialog.cpp
+	# ./ConsoleWidget.cpp
+	# ./DatabaseViewer.cpp
 	./utilite/UPlot.cpp
-	./CloudViewer.cpp
-	./CloudViewerCellPicker.cpp
-	./CloudViewerInteractorStyle.cpp
-	./OdometryViewer.cpp
-	./LoopClosureViewer.cpp
-	./DataRecorder.cpp
-	./CameraViewer.cpp
-	./CalibrationDialog.cpp
-	./ExportDialog.cpp
-	./ExportBundlerDialog.cpp
-	./PostProcessingDialog.cpp
-	./ExportCloudsDialog.cpp
-	./EditConstraintDialog.cpp
-	./MapVisibilityWidget.cpp
-	./GraphViewer.cpp
-	./EditDepthArea.cpp
-	./EditMapArea.cpp
-	./MultiSessionLocWidget.cpp
-	./MultiSessionLocSubView.cpp
-	./CreateSimpleCalibrationDialog.cpp
-	./ParametersToolBox.cpp
-	./DepthCalibrationDialog.cpp
-	./LinkRefiningDialog.cpp
-	./3rdParty/QMultiComboBox.cpp
-	./opencv/vtkImageMatSource.cpp
-	${qrc}
+	# ./CloudViewer.cpp
+	# ./CloudViewerCellPicker.cpp
+	# ./CloudViewerInteractorStyle.cpp
+	# ./OdometryViewer.cpp
+	# ./LoopClosureViewer.cpp
+	# ./DataRecorder.cpp
+	# ./CameraViewer.cpp
+	# ./CalibrationDialog.cpp
+	# ./ExportDialog.cpp
+	# ./ExportBundlerDialog.cpp
+	# ./PostProcessingDialog.cpp
+	# ./ExportCloudsDialog.cpp
+	# ./EditConstraintDialog.cpp
+	# ./MapVisibilityWidget.cpp
+	# ./GraphViewer.cpp
+	# ./EditDepthArea.cpp
+	# ./EditMapArea.cpp
+	# ./MultiSessionLocWidget.cpp
+	# ./MultiSessionLocSubView.cpp
+	# ./CreateSimpleCalibrationDialog.cpp
+	# ./ParametersToolBox.cpp
+	# ./DepthCalibrationDialog.cpp
+	# ./LinkRefiningDialog.cpp
+	# ./3rdParty/QMultiComboBox.cpp
+	# ./opencv/vtkImageMatSource.cpp
+	# ${qrc}
 	${headers_ui}
 )
 
